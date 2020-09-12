@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<link rel="stylesheet" href="css/player.css">
+	<title>Sound Wave</title>
+</head>
+<body>
+	<div id="background">
+		<div id="black-layer"></div>
+		<img src="img/cartoon.jpg" alt="pic">
+	</div>
+
+	<div id="main">
+		<div id="image">
+			<img src="img/cartoon.jpg" alt="pic">
+		</div>
+		<div id="player">
+			<div id="songTitle">Default Title</div>
+			<div id="artist">Artist</div>
+
+			<div id="seek-bar">
+				<div id="currentTime">00:00</div> <input type="range" id="seek" value="0" max="208.01"><div id="totalTime">00:00</div>
+			</div>
+
+			<div id="buttons-container">
+				<button id="pre" onclick="previous()"><i class="fas fa-step-backward"></i></button>
+				<button id="play" onclick="playPause()"><i class="fas fa-play"></i></button>
+				<button id="next" onclick="next()"><i class="fas fa-step-forward"></i></button>
+			</div>
+
+			<div id="volume-container">
+				<button id="mute" onclick="mute()"><i class="fa fa-volume-up"></i></button>
+				<input type="range" id="volume-bar" oninput="setVolume(this.value)" min="0" max="1" step="0.01" value="1">
+			</div>
+		</div>
+	</div>
+
+	<div id="playlist-container">
+		<!-- Playlist -->
+	</div>
+
+<script src="https://kit.fontawesome.com/310eee1f21.js" crossorigin="anonymous"></script>
+<script src="js/player.js"></script>
+</body>
+</html>
