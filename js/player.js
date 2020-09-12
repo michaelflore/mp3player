@@ -169,7 +169,6 @@ function createPlayList() {
 	//Start of Playlist code
 	for(let i = 0; i < tracks.length; i++) {
 
-		
 		let divElem = document.createElement("div");
 		let artist = document.createTextNode(`${tracks[i].artist}`);
 		let songName = document.createTextNode(`${tracks[i].title}`);
