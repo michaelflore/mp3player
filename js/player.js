@@ -39,6 +39,11 @@ function playSong() {
 	songTitle.textContent = tracks[currentSong].title;
 	artist.textContent = tracks[currentSong].artist;
 	song.play();
+	document.querySelector("#play i").classList.remove("fa-play");
+	document.querySelector("#play i").classList.add("fa-pause");
+
+	document.querySelector("#image img").setAttribute("src", tracks[currentSong].poster);
+	document.querySelector("#background img").setAttribute("src", tracks[currentSong].poster);
 }
 
 function playPause() {
@@ -98,15 +103,10 @@ function getTotalTime(seconds) {
 
 function next() {
 	currentSong++;
-	if(currentSong > 2) {
+	if(currentSong > tracks.length - 1) {
 		currentSong = 0;
 	}
 	playSong();
-	document.querySelector("#play i").classList.remove("fa-play");
-	document.querySelector("#play i").classList.add("fa-pause");
-
-	document.querySelector("#image img").setAttribute("src", tracks[currentSong].poster);
-	document.querySelector("#background img").setAttribute("src", tracks[currentSong].poster);
 }
 
 function previous() {
@@ -115,11 +115,6 @@ function previous() {
 		currentSong = 2;
 	}
 	playSong();
-	document.querySelector("#play i").classList.remove("fa-play");
-	document.querySelector("#play i").classList.add("fa-pause");
-
-	document.querySelector("#image img").setAttribute("src", tracks[currentSong].poster);
-	document.querySelector("#background img").setAttribute("src", tracks[currentSong].poster);
 }
 
 let volumeBar = document.getElementById('volume-bar');
@@ -183,11 +178,6 @@ function createPlayList() {
 		divElem.addEventListener("click", function(event) {
 			currentSong = +event.target.id;
 			playSong();
-			document.querySelector("#play i").classList.remove("fa-play");
-			document.querySelector("#play i").classList.add("fa-pause");
-
-			document.querySelector("#image img").setAttribute("src", tracks[currentSong].poster);
-			document.querySelector("#background img").setAttribute("src", tracks[currentSong].poster);
 		});
 	}
 }
