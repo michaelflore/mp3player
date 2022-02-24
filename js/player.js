@@ -112,7 +112,7 @@ function next() {
 function previous() {
 	currentSong--;
 	if(currentSong < 0) {
-		currentSong = 2;
+		currentSong = tracks.length - 1;
 	}
 	playSong();
 }
