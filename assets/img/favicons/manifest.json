@@ -1,7 +1,7 @@
 {
     "name":"music",
     "short_name":"music",
-    "icons": [
+    "icons":[
         {
             "src":"/android-chrome-192x192.png",
             "sizes":"192x192",
