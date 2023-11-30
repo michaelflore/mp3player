@@ -1,9 +1,9 @@
 const tracks = [
 	{
-		title: "On & On",
-		artist: "Cartoon",
-		source: "audio/Cartoon - On & On.mp3",
-		poster: "img/cartoon.jpg"
+		title: "Aperture",
+		artist: "Unison",
+		source: "audio/Unison - Aperture.mp3",
+		poster: "img/unison.jpg"
 	},
 	{
 		title: "Moonlight",
@@ -42,8 +42,8 @@ function playSong() {
 	document.querySelector("#play i").classList.remove("fa-play");
 	document.querySelector("#play i").classList.add("fa-pause");
 
-	document.querySelector("#image img").setAttribute("src", tracks[currentSong].poster);
-	document.querySelector("#background img").setAttribute("src", tracks[currentSong].poster);
+	document.querySelector("#image").setAttribute("src", tracks[currentSong].poster);
+	document.querySelector("#background").setAttribute("src", tracks[currentSong].poster);
 }
 
 function playPause() {
